@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>기본정보</legend>
+      <p>
+        <label for="user-id">아이디:</label>
+        <input 
+          type="text"
+          id="user-id" 
+          name="user-id"
+          minlength="4"
+          maxlength="12"
+          required><br>
+
+      </p>
+      <p>
+        <label for="user-password">비밀번호:</label>
+        <input 
+          type="password"
+          id ="user-password"
+          name ="user-password"
+          minlength="8"
+          maxlength="15"
+          required><br>
+      </p>
+      <p>
+        <label for="email">이메일:</label>
+        <input
+          type="email" id ="user" name ="user-email" required><br>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>추가정보</legend>
+      <p>
+        <label for="job">직업":</label>
+        <select id="job" name="job">
+          <option value="">선택하세요</option>
+          <option value="student">학생</option>
+          <option value="emloyee">회사원</option>
+        </select>
+      <p>
+        <label>관심분야:</label><br>
+        <input type="checkbox" id="hobby1" value="music">
+        <label for="hobby1">음악</label>
+        <input type="checkbox" id="hobby2" value="movie">
+        <label for="hobby2">영화</label>
+        <input type="checkbox" id="hobby3" value="sports">
+        <label for="hobby3">운동</label>
+      </p>
+    </fieldset>
+
+    <fieldset>
+      <legend>자기소개</legend>
+      <p> 
+        <label for="intro">자기소개:</label><br>
+        <textarea name="intro" name=""></textarea>
+      <input type="text" width="150" height="200"><br>
+      프로필사진:
+      <input type="file" value="파일 선택" placeholder="선택된 파일 없음">
+      </p> 
+    </fieldset>
+    <input type="submit" value="가입하기">
+    <input type="reset" value="다시 작성">
+  </form>
+</body>
+</html>
