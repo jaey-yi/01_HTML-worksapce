@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+      }
+
+    
+    .total{
+      border: 0.01px solid lightgray;
+      display: flex;
+      flex-direction: column;   
+      flex: 1;
+      padding-left: 1px;
+      height: 100vh;
+      background-color: black;
+      color: white;
+
+    }
+    .total>*{
+      border: 1px solid lightgray;
+      
+
+    }
+    .box1{
+     
+      display: flex;
+      flex-direction: row;
+      height: 100px;
+      width: 100%;
+    }
+    .box1>*{
+      border: 1px solid lightgray;
+      border-radius: 15px;
+      width: 100px;
+      height: 50px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: underline;
+
+    }
+    .box2{
+      display: flex;
+      flex-direction: column;
+      border: 0.1px solid lightgray;
+      height: 300px;
+      justify-content: center;
+
+    }
+    .box3{
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: 700px;
+
+    }
+
+    .box3 .title{
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      scroll-padding-top: 20px;
+      gap: 10px;
+    }
+    .title> .label{
+      border: 0px solid white;
+      width: 300px;
+      text-align: right;
+      
+       }
+    .title >.user{
+      flex: 1;
+      height: 35px;
+      padding-left: 10px;
+      margin-right: 5%;
+      background-color: black;
+      color: white;
+      border: 2px solid red;
+      border-radius: 10px;
+      }
+      .user:not(:placeholder-shown){
+        border: 2px solid blue;
+      }
+      .userIntroduce{
+        height: 100px;
+      }
+
+
+
+    
+
+  </style>
+  <div class="total">
+  <div class="box1">
+    <div class="button" style="background-color: black;">기본버튼</div>
+    <div class="primary" style="background-color: blue">프라이머리</div>
+    <div class="danger" style="background-color: red">위험</div>
+  </div>
+  <div class="box2">
+    <h1 style="display:flex; justify-content: center;">멋진 제목입니다</h1>
+    <div class="text" >문단은 두단으로 나뉨, 반응형에서 480px 이하일때는 한단으로 떨어져야함. 그림자는 과하지 않게유지</div>
+  </div>
+  <div class="box3">
+    <div class="title" >
+      <div class="label">이름:</div>
+      <input type="text" class="user userName" placeholder="이름" >
+    </div>
+    <div class="title">
+      <div class="label"> 이메일 :</div>
+      <input type="text" class="user userEmaile" placeholder="이메일">
+      </div>
+    <div class="title">
+      <div class="label"> 비밀번호 :</div>
+      <input type="password" class="user userEmaile" placeholder="비밀번호">
+      </div>
+    <div class="title">
+      <div class="label"> 생년월일 :</div>
+      <input type="date" class=" userEmaile">
+      </div>
+    <div class="title">
+      <div class="label"> 성별 :</div>
+      <input type="radio" id="male" name="gender" class="usergender" value="male">
+        <label for="male">남성</label>
+      <input type="radio" id="female" name="gender" class="usergender" value="female">
+        <label for="female">여성</label>
+    </div>
+    <div class="title">
+      <div class="label"> 취미 :</div>
+      <input type="checkbox" class="userhobby" id="sports" name="hobby" value="sports">
+       <label for="sports">운동</label>
+      <input type="checkbox" class="userhobby" id="reading"  name="hobby" value="reading">
+       <label for="reading">독서</label>
+    </div>
+    <div class="title">
+      <div class="label"> 자기소개 :</div>
+      <textarea name="user-userIntroduce" class="user userIntroduce" id="Introduce"></textarea>
+    </div>
+  <input type="button" style="width: 100px; margin-left: 20px; height: 70px;" value="입력완료" >
+  </div>
+</body>
+</html>
